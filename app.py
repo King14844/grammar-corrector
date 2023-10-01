@@ -6,6 +6,8 @@ import subprocess
 app = Flask(__name__)
 
 def process(text):
+    command = "python3 -m spacy download en"
+    subprocess.call(command, shell=True)
     gf = Gramformer(models=1, use_gpu=False)
     spell = Speller()
     corrected = spell(text)
@@ -22,6 +24,4 @@ def post():
     return res
 
 if __name__ == '__main__':
-    command = "python3 -m spacy download en"
-    subprocess.call(command, shell=True)
     app.run()
