@@ -1,0 +1,11 @@
+{
+  "services": {
+    "web": {
+      "command": "gunicorn app:app",
+      "public": true
+    }
+  },
+  "setupCommands": [
+    "./setup.sh"
+  ]
+}
