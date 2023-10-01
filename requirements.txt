@@ -5,3 +5,4 @@ transformers
 git+https://github.com/PrithivirajDamodaran/Gramformer.git
 autocorrect
 gunicorn
+spacy
